@@ -14,7 +14,6 @@ function enterMessage () {
   function question (){
   rl.question('', (answer) => {
     if (answer.match(regExp)) {
-      console.log('thank you');
       rl.close();
       return
     }
@@ -25,5 +24,6 @@ function enterMessage () {
 
  }
  question();
+ rl.on('close', () => {console.log('thank you')});
 } 
 enterMessage();
