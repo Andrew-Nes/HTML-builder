@@ -17,7 +17,7 @@ function enterMessage () {
       rl.close();
       return
     }
-    fs.appendFile(`${path.dirname(__filename)}/file.txt`, answer, err => {
+    fs.appendFile(`${path.dirname(__filename)}/file.txt`, `${answer} \n`, err => {
       if (err) throw err});
     question();
   });
